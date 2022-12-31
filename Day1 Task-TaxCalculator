@@ -1,0 +1,55 @@
+package Day1;
+
+import java.util.Scanner;
+
+	public class TaxCalulator
+	{
+	   public static void main(String xyz[])
+	   {
+		   
+		   Scanner sc = new Scanner(System.in);
+		   
+		System.out.print("Enter Basic Salary :- ");
+		double salary = sc.nextDouble();
+	    float tax = 1;
+		int taxRate = 0;
+		float hraRate=15;
+		float daRate=60;
+		double total;
+		
+		if(salary<500000) {
+			taxRate=0;
+			tax=(float)(salary*0);
+		}
+		
+		else if(salary>500000 && salary<1000000)
+		{
+			taxRate = 20;
+			tax = (float)(salary * 0.20);
+		}
+		//else(salary>3000000)
+		else if(salary>1000000)
+		{
+			taxRate = 30;
+			tax = (float)(salary*0.30);
+			
+		}
+		
+		float hra=(float)(salary*0.15);
+		
+		float da=(float)(salary*0.6);
+		
+		
+		System.out.println("For Salary "+salary+",HRA would be @ "+hraRate+"% amount "+hra+"Rs.");
+		
+		
+		System.out.println("For Salary "+salary+",DA would be @ "+daRate+"% amount "+da+"Rs.");
+		
+		
+		System.out.println("For Salary "+salary+", Tax would be @ "+taxRate+"% amount "+tax+"Rs.");
+		
+		
+	   }
+	}
+
+
